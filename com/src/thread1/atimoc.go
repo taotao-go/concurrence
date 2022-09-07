@@ -33,6 +33,7 @@ func Sub3() {
 func ADD3(my *int32) {
 	atomic.AddInt32(my, 1)
 	fmt.Println("版本提交v2")
+	fmt.Println("版本提交v3")
 }
 func Sub3(my *int32) {
 	atomic.AddInt32(my, -1)
