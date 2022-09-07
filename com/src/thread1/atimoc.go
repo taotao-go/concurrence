@@ -1,6 +1,9 @@
 package thread1
 
-import "sync/atomic"
+import (
+	"fmt"
+	"sync/atomic"
+)
 
 /*
 原子操作，也是协程加锁的一种方式
@@ -29,6 +32,7 @@ func Sub3() {
 // cas compare and swap:比较并且交换，就是在添加之前当前这个值要和以前那个值进行比较一下是否一样，一样才进行添加，否则认为添加失败
 func ADD3(my *int32) {
 	atomic.AddInt32(my, 1)
+	fmt.Println("版本提交v2")
 }
 func Sub3(my *int32) {
 	atomic.AddInt32(my, -1)
